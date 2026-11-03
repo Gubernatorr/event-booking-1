@@ -1,3 +1,11 @@
 spring:
   application:
     name: event-booking-1
+  mvc:
+    problemdetails:
+      enabled: true                      # помилки у стандартному форматі RFC 9457
+
+server:
+  port: 8080
+  error:
+    include-message: always

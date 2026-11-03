@@ -8,9 +8,9 @@
 		<version>4.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.eventbooking</groupId>
-	<artifactId>event-booking-1</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>com.eventbooking</groupId> <!-- Координати твого артефакту. -SNAPSHOT = версія в розробці, не реліз -->
+	<artifactId>event-booking-1</artifactId> <!-- Координати твого артефакту. -SNAPSHOT = версія в розробці, не реліз -->
+	<version>0.0.1-SNAPSHOT</version> <!-- Координати твого артефакту. -SNAPSHOT = версія в розробці, не реліз -->
 	<name/>
 	<description/>
 	<url/>
@@ -27,16 +27,16 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>21</java.version> <!-- Parent передасть це компілятору як -release 21 -->
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation</artifactId>
+			<artifactId>spring-boot-starter-validation</artifactId> <!-- Bean Validation: @NotBlank, @Positive, @Valid -->
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc</artifactId>
+			<artifactId>spring-boot-starter-webmvc</artifactId> <!-- REST: Spring MVC + Tomcat + Jackson -->
 		</dependency>
 
 		<dependency>
@@ -46,7 +46,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webmvc-test</artifactId>
+			<artifactId>spring-boot-starter-webmvc-test</artifactId> <!-- JUnit 5, AssertJ, Mockito, MockMvc. test — не потрапить у фінальний jar -->
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -71,7 +71,7 @@
 							<annotationProcessorPaths>
 								<path>
 									<groupId>org.springframework.boot</groupId>
-									<artifactId>spring-boot-configuration-processor</artifactId>
+									<artifactId>spring-boot-configuration-processor</artifactId>  <!-- Генерує метадані для автодоповнення власних app.* в IDE. optional — не тягнеться далі -->
 								</path>
 							</annotationProcessorPaths>
 						</configuration>

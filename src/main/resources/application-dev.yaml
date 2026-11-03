@@ -1,0 +1,3 @@
+logging:
+  level:
+    com.eventbooking: DEBUG   # докладні логи лише нашого коду, не всього Spring
