@@ -49,8 +49,9 @@ class InMemoryRepositoryTest {
     void findAllReturnsUnmodifiableList() {
         repository.save(new Item("1", "x"));
         List<Item> all = repository.findAll();
+        Item extra = new Item("2", "y");
 
-        assertThatThrownBy(() -> all.add(new Item("2", "y")))
+        assertThatThrownBy(() -> all.add(extra))
                 .isInstanceOf(UnsupportedOperationException.class);
     }
 }
